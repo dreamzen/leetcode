@@ -1,7 +1,12 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+/*
+Although it's AC, but actually it's not correct.
+Run it and you will see.
+We should parse the whole cycle from 'head' to 'tail',
+not just from v.begin() to v.end().
+*/
 class Solution
 {
 public:
@@ -73,15 +78,14 @@ int main()
     gas.push_back(13);
     gas.push_back(2);
 
-    cost.push_back(7);
-    cost.push_back(3);
-    cost.push_back(6);
-    cost.push_back(2);
-    cost.push_back(0);
-    cost.push_back(11);
-    cost.push_back(-1);
+    cost.push_back(70);
+    cost.push_back(30);
+    cost.push_back(60);
+    cost.push_back(20);
+    cost.push_back(21);
+    cost.push_back(14);
+    cost.push_back(1);
 
-    cout << "hehe" << endl;
     Solution s;
     cout << s.canCompleteCircuit(gas, cost) << endl;
     return 0;
