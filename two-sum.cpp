@@ -32,6 +32,7 @@ public:
                     index2 = ite->second + 1;
                     result.push_back(index1);
                     result.push_back(index2);
+                    return result;
                 }
             }
         }
