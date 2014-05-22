@@ -12,6 +12,9 @@ public:
         queue<int> qLen;
         qStr.push(start);
         qLen.push(0);
+//FIX
+		dict.insert(start);
+		dict.insert(end);
         
         while(!qStr.empty())
         {
