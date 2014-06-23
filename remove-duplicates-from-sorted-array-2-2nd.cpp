@@ -11,14 +11,15 @@ public:
         {
             return n;
         }
-        int lastIndexOfNewArray = 1;
-        for(int i = 2; i < n; i++)
+		int duplicates = 2;// Extensibility!
+        int lastIndexOfNewArray = duplicates - 1;
+        for(int i = lastIndexOfNewArray + 1; i < n; i++)
         {
-            if((A[i] == A[lastIndexOfNewArray]) && (A[i] == A[lastIndexOfNewArray - 1]))
-            {
-                continue;
-            }
-            A[++lastIndexOfNewArray] = A[i];
+			//Because A is sorted, so it's enough.
+			if(A[i] != A[lastIndexOfNewArray - duplicates + 1])
+			{
+            	A[++lastIndexOfNewArray] = A[i];
+			}
         }
         return lastIndexOfNewArray + 1;
     }
