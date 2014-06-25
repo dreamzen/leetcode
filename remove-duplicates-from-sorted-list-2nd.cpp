@@ -24,7 +24,8 @@ public:
             if(p->val == pre->val)
             {
                 pre->next = p->next;
-                p = p->next;
+				delete p;
+                p = pre->next;
             }
             else
             {
